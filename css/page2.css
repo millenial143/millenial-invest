@@ -1,0 +1,96 @@
+.page2 {
+	position: absolute;
+	left: 0;
+    right: 0;
+    width: 100%;
+    align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #101630;
+}
+
+
+.main-dia{
+	min-width: 900px;
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	flex-wrap: wrap;
+}
+
+#second-dia{
+
+}
+.page2-subname{
+	font-size: 25px;
+	font-weight: 600;
+	color: silver;
+	margin: 30px;
+/*	border:1px solid yellow;*/
+}
+
+.diagramm-block{
+
+	display: flex;
+	justify-content: center;
+	flex-grow: 1;
+}
+
+.diagramm-block-diagramm{
+/*	margin-left: 70px;
+	margin-right: -70px;*/
+
+	min-width: 550px;
+	max-width: 750px;
+	height: 375px;
+}
+.diagramm-block-name p {
+	font-family: Sans-Serif;
+	font-size: 16px;
+	color: silver;
+}
+
+
+
+.grahic-block{
+	display: flex;
+	flex-direction: column;
+
+}
+
+.graphic-button-block {
+	display: flex;
+	justify-content: center;
+}
+
+.graphic-button{
+	margin-top: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 10px;
+	margin-right: 10px;
+	border-radius: 7px;
+	color: silver;
+	background-color: #091030;
+	width: 70px;
+	height: 40px;
+	transition: 0.2s;
+	font-size: 16px;
+	font-weight: 600;
+	align-self: center;
+	margin-top: 0px;
+	border: 1px solid silver;
+}
+
+.graphic-button:hover{
+	color: black;
+	background-color: silver;
+	cursor: pointer;
+}
+
+.gb_active{
+	color: black;
+	background-color: silver;	
+}

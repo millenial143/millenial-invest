@@ -1,0 +1,361 @@
+
+.main {
+	font-family: sans-serif;
+	letter-spacing: 1px;
+	font-weight: 600;
+	font-size: 14px;
+
+	align-self: stretch;
+	background-color: #090c1c;
+	flex-grow: 1;
+	display: flex;
+}
+
+
+.main-nav { 
+
+	align-self: stretch;
+	width: 200px;
+	background-color: #090c1c;
+	display: flex;
+	flex-direction: column;
+}
+
+
+.main-nav-block {
+	flex-grow: 1;
+}
+
+.main-page {
+	flex-grow: 1;
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	border-radius: 10px 0 0 0;
+	background-color: #101630;
+
+}
+
+.main-nav-block {
+	margin-top: 50px;
+	width: 100%;
+}
+
+.main-nav-block-item {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	height: 40px;
+	transition: 0.1s
+}
+
+.main-nav-block-item_active {
+	background-color: #101630;
+}
+
+.main-nav-block-item:hover{
+	background-color: #19214d;
+	cursor: pointer;
+}
+
+.main-nav-block-item span{
+	/*color: #C0C0C0;*/
+	margin-left: 15px;
+
+	color: silver;
+}
+
+
+
+.add-portfolio-block{
+	display: flex;
+	justify-content: flex-end;
+	height: 70px;
+	align-items: center;
+}
+
+.add-portfolii-block-button{
+	position: relative;
+	left: -15px;
+	transition: 0.3s; 
+	height: 40px;
+	width: 40px;
+}
+
+.add-portfolii-block-button:hover{
+	transform: rotate(90deg) scale(1.15);
+	cursor: pointer;
+/*	transform: scale(1.1);*/
+}
+
+.bi-plus-circle {
+	height: 40px;
+	width: 40px;
+}
+
+.add-portfolio-popup {
+	z-index: 100000000000;
+	transition: 0.2s;
+	visibility: hidden;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color:rgba(0, 0, 0, 0);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.add-portfolio-popup-popup{
+	position: relative;
+	bottom: -1500px;
+	opacity: 0;
+	background-color: #101630;
+	border-radius: 10px;
+	height: 400px;
+	width: 450px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.2s;
+}
+
+.add-portfolio-popup-popup_active{
+	bottom: 0;
+}
+
+.add-portfolio-popup-popup label{
+	margin-bottom: 10px;
+
+	font-family: sans-serif;
+	font-weight: 700;
+	letter-spacing: 1.2px;
+
+	color: silver;
+}
+
+.add-portfolio-popup-popup input{
+	margin-bottom: 30px;
+}
+.add-portfolio-popup-popup select{
+	margin-bottom: 30px;
+}
+
+
+
+
+
+.add-portfolio-popup-popup-form{
+	margin-top: 50px;
+	width: 350px;
+	height: 400px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.add-portfolio-popup-popup-form input[type=button]{
+	border-radius: 7px;
+	color: silver;
+	background-color: #091030;
+	width: 100px;
+	height: 50px;
+	transition: 0.2s;
+	font-size: 16px;
+	font-weight: 600;
+	align-self: center;
+	margin-top: 0px;
+}
+
+.add-portfolio-popup-popup-form input[type=button]:hover{
+	
+	color: black;
+	background-color: silver;
+	cursor: pointer;
+}
+
+input, select{
+	
+	border-radius: 7px;
+	background-color: #091030;
+	height: 30px;
+	width: 350px;
+	border: 1px solid silver;
+	outline: none;
+	font-size: 14px;
+	color: silver;
+	font-weight: 600;
+}
+
+select {
+	padding-left: 3px;
+	height: 30px;
+	width: 150px;
+}
+
+input {
+	padding-left: 8px;
+}
+
+input, select:focus{
+	outline: none;
+	background-color: #091030;
+}
+
+.exel-label{ 
+	/*padding-top: 12px;*/
+	padding: 6px;
+	width:200px;
+	height: 30px;
+	border:2px dashed silver;
+	border-radius:5px;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	cursor:pointer;
+	text-align:center;
+}
+
+.exel-title{
+	position: relative;
+	left: 50px;
+}
+
+.ebat{
+	position: relative;
+	left: 50px;
+	top: 6px;
+}
+
+.ebat2{
+	margin-bottom: 15px;
+	margin-top: 10px;
+}
+
+.ebat3{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	align-items: center;
+	
+}
+input[type=file]{
+	outline:0;
+	opacity:0;
+	pointer-events:none;
+	user-select:none;
+	margin-bottom: -5px;
+}
+
+.file-name{
+	color: silver;
+	margin-left: 10px;
+	font-family: sans-serif;
+}
+
+.upload-file-block{
+	display: flex;
+	align-items: center;
+}
+
+.update-btn{
+	height: 50px;
+	width: 50px;
+	margin-right: 20px;
+/*	border-radius: 25px;
+	background-color: silver;*/
+	transition: 0.3s;
+	transform: rotate(90deg)
+}
+.update-btn:hover{
+	transform: rotate(270deg) scale(1.15);
+	cursor: pointer;
+
+/*	border-radius: 25px;
+	background-color: silver;*/
+}
+
+.main-nav-context-menu {
+	z-index: 10000;
+	position: fixed;
+	visibility: hidden;
+	display: flex;
+	flex-direction: column;
+	background-color: #090c1c;
+	width: 100px;
+	border-radius: 8px;
+	border: 1px solid silver;
+	overflow: hidden;
+}
+
+/*.main-nav-context-menu:nth-child(1){
+	border-radius: 8px 8px 0 0; 
+	border: 1px solid red;
+}
+
+.main-nav-context-menu:nth-child(2){
+	border-radius: 0 0 8px 8px; 
+	border: 1px solid red;
+
+}*/
+
+.main-nav-context-menu-item {
+	background-color: #090c1c;
+	align-self: stretch;
+	display: flex;
+	align-items: center;
+	transition: 0.1s;
+	height: 20px;
+}
+
+.main-nav-context-menu-item span{
+	font-family: sans-serif;
+	font-weight: 700;
+	letter-spacing: 1.2px;
+	font-size: 12px;
+	margin-left: 5px;
+}
+
+.main-nav-context-menu-item.update span{
+	position: relative;
+	
+	color: silver;/*linear-gradient(to bottom, #dbdbdb 0%,#6e6e6e 100%);*/
+
+}
+
+
+.main-nav-context-menu-item:hover{
+	background-color: #19214d;
+	cursor: pointer;
+}
+
+.main-nav-context-menu-item.delete {
+	color: #963c3c;
+}
+
+.main-nav-context-menu-item.delete:hover {
+	color: silver;
+	background-color: #963c3c;
+}
+
+
+.main-page-analytics{
+	position: relative;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	align-self: stretch;
+	flex-grow: 1;
+/*	display: flex;
+	justify-content: center;
+	align-items: center;*/
+}
+::-webkit-scrollbar { width: 6px; height: 3px;}
+/*::-webkit-scrollbar-button {  background-color: #3f114f; }*/
+::-webkit-scrollbar-track {  background-color: #3f114f;}
+::-webkit-scrollbar-track-piece { background-color: #090c1c;}
+::-webkit-scrollbar-thumb { height: 20px; background-color: #3f114f; border-radius: 3px;}
+::-webkit-scrollbar-corner { background-color: #999;}}
+/*::-webkit-resizer { background-color: #3f114f;}*/

@@ -1,0 +1,100 @@
+
+
+/*
+text : 	#C0C0C0
+color1 : #090c1c
+color2 : #101630
+*/
+
+.title-bar {
+	color: #C0C0C0;
+	display: flex;
+	height: 25px;
+	background-color: #090c1c;
+}
+
+.title-bar__title {
+	display: flex;
+	justify-content: flex-start;
+	flex-grow: 1;
+	-webkit-app-region: drag;
+	-webkit-user-select : none;
+}
+
+.title-bar__title p {
+	position: absolute;
+	left: 5px;
+	width: 200px;
+}
+
+.title-bar__title p span{
+	font-family: sans-serif;
+	font-weight: 700;
+	letter-spacing: 1.2px;
+
+	display: block;
+	position: relative;
+	font-size: $font-size;
+	background: linear-gradient(to bottom, #dbdbdb 0%,#a1a1a1 49%,#363636 51%,#dbdbdb 100%);
+	background-blend-mode: multiply;
+	background-size: 10px $font-size;
+	background-repeat: repeat;
+	line-height: 1;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+
+
+
+.title-bar div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+/*.title-bar div{
+	border: 1px solid red;
+}*/
+
+.title-bar__roll-bown-button {
+	width: 25px;
+	transition: 0.1s;
+	z-index: 1000000;
+}
+
+.title-bar__roll-bown-button:hover{
+	background-color: #19214d;
+	cursor: pointer;
+}
+
+.title-bar__roll-bown-button svg {
+	align-self: flex-end;
+}
+
+.title-bar__fullscreen-window {
+	width: 25px;
+	transition: 0.1s;
+	z-index: 1000000;
+}
+
+.title-bar__fullscreen-window:hover{
+	background-color: #19214d;
+	cursor: pointer;
+}
+
+.title-bar__fullscreen-window svg {
+	width: 9px;
+	height: 9px;
+}
+
+.title-bar__close-button {
+	width: 25px;
+	transition: 0.1s;
+	z-index: 1000000;
+}
+
+.title-bar__close-button:hover{
+	background-color: #a32315;
+	cursor: pointer;
+}

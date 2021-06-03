@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/titleBar.css">
+	<link rel="stylesheet" href="css/app.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/addPopup.css">
+	<link rel="stylesheet" href="css/tabs.css">
+	<link rel="stylesheet" href="css/page1.css">
+	<link rel="stylesheet" href="css/page2.css">
+	<link rel="stylesheet" href="css/page3.css">
+	<script defer src="js/titleBar.js"></script>
+	<title>Document</title>
+</head>
+<body>
+	<div class="app">
+		<div class="add-portfolio-popup">
+			<div class="add-portfolio-popup-popup">
+				<form action="" class="add-portfolio-popup-popup-form">
+					<label for="prt-name">Название портфеля</label>
+					<input type="text" name="prt-name" id="prt-name" class="add-portfolio-text-area">
+					<label for="broker-select">Выберите вашего брокера</label>
+					<select name="broker-select" id="broker-select" class="broker-select">
+						<option value="TIN">Тинькофф</option>
+						<option value="SBR">Сбер Банк</option>
+						<option value="VTB">ВТБ</option>
+					</select>
+
+					<label for="exel">Загрузите отчет в формате excel</label>
+					<div class="upload-file-block">
+						<label class="exel-label">
+					      <span class="exel-title">Добавить файл</span>
+					      <input type="file" class="file-uploader">
+					    </label>
+					    <p class="file-name">Файл не выбран</p>
+					</div>
+						
+					<input type="file" name="exel" id="exel">
+					<input type="button" value="Создать" class="add-portfolii-button">
+				</form>
+			</div>
+		</div>
+		<div class="delete-popup">
+			<div class="delete-popup-popup">
+				<p>
+					<span>Удалить </span><span class="delete-q"></span><span> ?</span>
+				</p>
+				<div class="dp-btn-block">
+					<input type="button" class="dp-btn-block-delete" value="Удалить"></input>
+					<input type="button" class="dp-btn-block-cancel" value="Отмена"></input>
+				</div>
+			</div>
+		</div>
+		<div class="update-popup">
+			<div class="update-popup-popup">
+				<div class="update-file-block ebat3">
+					<label class="exel-label">
+				      <span class="exel-title ebat">Добавить файл</span>
+				      <input type="file" class="file-uploader">
+				    </label>
+				    <p class="file-name ebat2">Файл не выбран</p>
+				</div>
+				<div class="up-btn-block">
+					<input type="button" class="up-btn-block-btn" value="Обновить"></input>
+				</div>
+			</div>
+		</div>
+		<div class="main-nav-context-menu">
+
+			<div class="main-nav-context-menu-item update openUpdatePopup">
+				<span class="openUpdatePopup">Обновить</span>
+			</div>
+			<div class="main-nav-context-menu-item delete openDeletePopup">
+				<span class="openDeletePopup">Удалить</span>
+			</div>
+		</div>
+		<div class="title-bar">
+			<div class="title-bar__title">
+				<p>
+					<span>Millenial invest</span>
+				</p>
+			</div>
+			<div id="rollDownBtn" class="title-bar__roll-bown-button">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-dash" viewBox="0 0 16 16">
+				  <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+				</svg>
+			</div>
+			<div id="fullScreenBtn" class="title-bar__fullscreen-window">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-square" viewBox="0 0 16 16">
+				  <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+				</svg>
+			</div>
+			<div id="closeBtn" class="title-bar__close-button">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-x" viewBox="0 0 16 16">
+				  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+				</svg>
+			</div>
+		</div>
+		<div class="main">
+			<div class="main-nav">
+				<div class="main-nav-block">
+					<div class="main-nav-block-item main-nav-block-item_active">
+						<p class="main-nav-block-item__title">
+							<span>Портфель 1</span>
+						</p>
+					</div>					
+				</div>
+				<div class="add-portfolio-block">
+					<div class="update-btn">
+						<svg height="50" width="50" viewBox="0 0 150 150" fill="#090c1c">
+						  <rect height="150" width="150"/>
+						  <g> 
+						    <path
+						      d="M 75 25
+						         A 50 50, 0, 1, 1, 25 75"
+						      stroke="silver"
+						      stroke-width="8"
+						      fill="transparent"
+						    />
+
+						    <line x1="25" y1="75" x2="15" y2="85" stroke="silver"  stroke-width="8" />
+						    <line x1="25" y1="75" x2="35" y2="85" stroke="silver"  stroke-width="8" />
+						  </g>
+						</svg>
+					</div>
+					<div class="add-portfolii-block-button">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="silver" class="bi bi-plus-circle" viewBox="0 0 16 16">
+							<defs>
+							   <linearGradient id="grad3" x1="0%" y1="0%" x2="0%" y2="100%">
+							      <stop offset="0%" style="stop-color:#dbdbdb" />
+							      <stop offset="100%" style="stop-color:#6e6e6e" />
+							    </linearGradient>
+							</defs>
+							<path fill="silver" d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+							<path fill="silver" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+						</svg>
+					</div>
+					
+				</div>
+			</div>
+
+			<div class="main-page">
+				<div class="main-page-nav-block">
+					<div class="main-page-nav-block-item main-page-nav-block-item_active main-tab1">
+						<p>
+							<span>Активы</span>
+						</p>
+					</div>
+					<div class="main-page-nav-block-item main-tab2">
+						<p><span>Аналитика</span></p>
+					</div>
+					<div class="main-page-nav-block-item main-tab3">
+						<p><span>Сделки</span></p>
+					</div>
+				</div>
+				<div class="main-page-analytics">
+					<div class="page0">
+						
+					</div>
+					<div class="page1 actve-page">
+						<p class="active-name">
+							Акции
+						</p>
+						<table class="share-table share">
+							<tr class="share-table-main-row">
+								<td>Компания</td>
+								<td>Количиство</td>
+								<td>Текущая цена</td>
+								<td>Стоимость бумаг в портфеле</td>
+								<td>Прибыль</td>
+								<td>Курс. прибыль</td>
+							</tr>
+						</table>
+						<p class="active-name">
+							ETF/ПИФы
+						</p>
+						<table class="share-table etf">
+							<tr class="share-table-main-row">
+								<td>Компания</td>
+								<td>Количиство</td>
+								<td>Текущая цена</td>
+								<td>Стоимость бумаг в портфеле</td>
+								<td>Прибыль</td>
+								<td>Курс. прибыль</td>
+							</tr>
+						</table>
+						<p class="active-name">
+							Облигации
+						</p>
+						<table class="share-table bond">
+							<tr class="share-table-main-row">
+								<td>Название</td>
+								<td>Количиство</td>
+								<td>Текущая цена</td>
+								<td>Стоимость бумаг в портфеле</td>
+								<td>Прибыль</td>
+								<td>Курс. прибыль</td>
+							</tr>
+						</table>
+					</div>
+					<div class="page2 active-page">
+						<div class="page2-subname">
+							<p>Сотстав портфеля</p>
+						</div>
+						<div class="main-dia">
+							<div class="diagramm-block">
+								<!-- <div class="diagramm-block-name">
+									<p>Сотстав портфеля по категориям</p>
+								</div> -->
+								<div class="diagramm-block-diagramm">
+									<canvas id="first-dia" width="450" height="375"></canvas>
+								</div>
+							</div>
+							<div class="diagramm-block">
+								<!-- <div class="diagramm-block-name">
+									<p>Сотстав портфеля по категориям</p>
+								</div> -->
+								<div class="diagramm-block-diagramm">
+									<canvas id="second-dia" width="450" height="375"></canvas>
+								</div>
+							</div>
+							<div class="diagramm-block">
+								<!-- <div class="diagramm-block-name">
+									<p>Сотстав портфеля по категориям</p>
+								</div> -->
+								<div class="diagramm-block-diagramm">
+									<canvas id="third-dia" width="450" height="375"></canvas>
+								</div>
+							</div>
+							<div class="diagramm-block">
+								<!-- <div class="diagramm-block-name">
+									<p>Сотстав портфеля по категориям</p>
+								</div> -->
+								<div class="diagramm-block-diagramm">
+									<canvas id="four-dia" width="450" height="375"></canvas>
+								</div>
+							</div>
+						</div>
+
+						<div class="page2-subname">
+							<p>Стоимость потфеля</p>
+						</div>
+						<div class="main-dia">
+							<div class="grahic-block">
+								<canvas id="first-graph" width="900" height="500"></canvas>
+							</div>
+
+						</div>
+
+						<div class="page2-subname">
+							<p>Прибыль портфеля</p>
+						</div>
+						<div class="main-dia">
+							<div class="grahic-block">
+								<canvas id="second-graph" width="900" height="500"></canvas>
+							</div>
+
+						</div>
+						
+					</div>
+					<div class="page3">
+						<table class="trans-table">
+							<tr class="trans-table-main-row">
+								<td>Название</td>
+								<td>Тикер</td>
+								<td>Дата</td>
+								<td>Количиство</td>
+								<td>Цена</td>
+								<td>Комиссия</td>
+								<td>Сумма</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script defer src="js/mainNav.js"></script>
+	<script defer src="js/newPort.js"></script>
+	<script defer src="js/update.js"></script>
+	<script defer src="js/upPort.js"></script>
+	<script defer src="js/tabs.js"></script>
+	<script defer src="js/page1.js"></script>
+	<script defer src="js/page2.js"></script>
+	<script defer src="js/page3.js"></script>
+	<script>
+		require('./render.js')
+	</script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+.delete-popup {
+	z-index: 100000000000;
+	transition: 0.2s;
+	visibility: hidden;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color:rgba(0, 0, 0, 0);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.delete-popup-popup{
+	position: relative;
+	bottom: -1500px;
+	opacity: 0;
+	background-color: #101630;
+	border-radius: 10px;
+	height: 130px;
+	width: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	transition: 0.2s;
+}
+
+.delete-popup-popup span{
+	margin-bottom: 10px;
+
+	font-family: sans-serif;
+	font-weight: 700;
+	letter-spacing: 1.2px;
+
+	color: silver;
+}
+
+.delete-popup-popup_active{
+	bottom: 0;
+}
+
+.dp-btn-block {
+	margin-top: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.dp-btn-block input[type="button"]{
+	margin-left: 15px;
+	margin-right: 15px;
+	border-radius: 7px;
+	color: silver;
+	background-color: #091030;
+	width: 100px;
+	height: 50px;
+	transition: 0.2s;
+	font-size: 16px;
+	font-weight: 600;
+	align-self: center;
+	margin-top: 0px;
+}
+
+.dp-btn-block input[type="button"]:hover{
+	
+	color: black;
+	background-color: silver;
+	cursor: pointer;
+}
+
+.update-popup {
+	z-index: 100000000000;
+	transition: 0.2s;
+	visibility: hidden;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color:rgba(0, 0, 0, 0);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.update-popup-popup{
+	position: relative;
+	bottom: -1500px;
+	opacity: 0;
+	background-color: #101630;
+	border-radius: 10px;
+	height: 200px;
+	width: 400px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	transition: 0.2s;
+}
+
+.update-popup-popup span{
+	margin-bottom: 10px;
+
+	font-family: sans-serif;
+	font-weight: 700;
+	letter-spacing: 1.2px;
+
+	color: silver;
+}
+
+.update-popup-popup_active{
+	bottom: 0;
+}
+
+
+.up-btn-block {
+	margin-top: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.up-btn-block input[type="button"]{
+	margin-top: 20px;
+	margin-left: 15px;
+	margin-right: 15px;
+	border-radius: 7px;
+	color: silver;
+	background-color: #091030;
+	width: 100px;
+	height: 50px;
+	transition: 0.2s;
+	font-size: 16px;
+	font-weight: 600;
+	align-self: center;
+	margin-top: 0px;
+}
+
+.up-btn-block input[type="button"]:hover{
+	
+	color: black;
+	background-color: silver;
+	cursor: pointer;
+}
+
+.file-name.update {
+	
+}
+
+
+
+
+
+
+
+

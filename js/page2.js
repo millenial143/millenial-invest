@@ -38,20 +38,19 @@ async function getPricesWithYahoo(securities, dates) {
 	for (let i = 0; i < dates.length; i++ ){
 		for (let j = 0; j < securities[i].length; j++){
 			if (securities[i][j].number != 0){
-				//console.log(securities[i][j].ticker)
+			
 				let year = dates[i].split(',')[1];
 				let mounth = dates[i].split(',')[0];
 				let day = 30;
 				if (mounth == 2){
 					day = 28;
 				}
-				//console.log(toTimestamp(`${year} ${mounth} ${day} 23:59:59`));
+				
 				let timeStap1 = toTimestamp(`${year} ${mounth} ${day - 1} 16:00:00`);
 				let timeStap2 = 9999999999;
 
 				let req2Promise;
 				let reqPromise = new Promise ((resolve, reject) => {
-					//console.log(`https://query1.finance.yahoo.com/v8/finance/chart/${securities[i][j].ticker}.ME?&period1=${timeStap1}&period2=${timeStap2}&interval=1d&`);
 					request({url: `https://query1.finance.yahoo.com/v8/finance/chart/${securities[i][j].ticker}?&period1=${timeStap1}&period2=${timeStap2}&interval=1d&`, json: true}, function(err, res, json) {
 						
 						if (json.chart.result == null || json.chart.result[0].meta.currency == null){
@@ -62,7 +61,6 @@ async function getPricesWithYahoo(securities, dates) {
 										console.log(err)
 									}
 									if (json2.chart.result == null){
-										//console.log( `https://query1.finance.yahoo.com/v8/finance/chart/${securities[i][j].ticker}.ME?&period1=${timeStap1}&period2=${timeStap2}&interval=1d&`);
 									} else {
 										if (json2.chart.result[0].meta.currency == null){
 
@@ -82,7 +80,7 @@ async function getPricesWithYahoo(securities, dates) {
 
 											while (arra[index2] == null){
 												index2 = index2 - 1;
-												//console.log(index2)
+											
 											}
 										
 											securities[i][j].price = json2.chart.result[0].meta.regularMarketPrice * arra[index1]/arra[index2];
@@ -142,8 +140,6 @@ async function getPricesWithYahoo(securities, dates) {
 }
 
 async function getPricesWithYahooByM(securities, dates) {
-	/*console.log(securities);
-	console.log(dates);*/
 
 	for (let i = 0; i < dates.length; i++ ){
 		for (let j = 0; j < securities[i].length; j++){
@@ -154,7 +150,6 @@ async function getPricesWithYahooByM(securities, dates) {
 
 				let req2Promise;
 				let reqPromise = new Promise ((resolve, reject) => {
-					//console.log(`https://query1.finance.yahoo.com/v8/finance/chart/${securities[i][j].ticker}.ME?&period1=${timeStap1}&period2=${timeStap2}&interval=1d&`);
 					request({url: `https://query1.finance.yahoo.com/v8/finance/chart/${securities[i][j].ticker}?&period1=${timeStap1}&period2=${timeStap2}&interval=10m&`, json: true}, function(err, res, json) {
 						if (json.chart.result == null || json.chart.result[0].meta.currency == null){
 							req2Promise = new Promise ((resolve, reject) => {
@@ -164,7 +159,6 @@ async function getPricesWithYahooByM(securities, dates) {
 										console.log(err)
 									}
 									if (json2.chart.result == null){
-										//console.log( `https://query1.finance.yahoo.com/v8/finance/chart/${securities[i][j].ticker}.ME?&period1=${timeStap1}&period2=${timeStap2}&interval=1d&`);
 									} else {
 										if (json2.chart.result[0].meta.currency == null){
 
@@ -184,7 +178,6 @@ async function getPricesWithYahooByM(securities, dates) {
 
 											while (arra[index2] == null){
 												index2 = index2 - 1;
-												//console.log(index2)
 											}
 										
 											securities[i][j].price = json2.chart.result[0].meta.regularMarketPrice * arra[index1]/arra[index2];
@@ -1032,8 +1025,6 @@ function createSummGraphic(message, table){
 		});
 	})
 
-	
-	//createProfitGraphic();
 }
 
 
@@ -1044,7 +1035,7 @@ ipc3.on('updP2', (event, message, table) => {
 
 	let CaS = getSectorsAndCountriesWithYahoo(message);
 	CaS.then((v) => {
-//		console.log(v)
+
 		createSectorsDiagramm(v);
 		createCountresDiagramm(v);
 	})

@@ -5,8 +5,6 @@ const url = require('url');
 const fs = require('fs');
 const XLSX = require('xlsx');
 
-// const {app, BrowserWindow, ipcMain} = require('electron');
-// const { ipcRenderer } = require('electron');
 const ipc2 = require('electron').ipcRenderer;
 
 
@@ -40,18 +38,8 @@ function toDateTime(date, time) {
 function toFlot(x){
 	return x.split(',').join('.');
 }
-/*
-var db = new sqlite3.Database('db.sqlite3', (err) => {
-	if (err){
-		return console.error(err.message);
-	}
-
-	console.log('connected to db')
-});
 
 
-
-db.close();*/
 function repeatCheck(name, table){
 	for (let i = 0; i < table.length; i++){
 		if (table[i].name == name){
@@ -179,7 +167,7 @@ addBtn.addEventListener('click', () => {
 
 								let DT = toDateTime(ws[`H${row}`].v, ws[`L${row}`].v);
 
-								//console.log(`${toDateTime(ws[`H${row}`].v, ws[`L${row}`].v)}`)
+				
 								console.log(typeof ws[`H${row}`].v)
 								console.log(ws[`H${row}`].v.length)
 								if (ws[`A${row}`].v.length == 10){
@@ -187,7 +175,7 @@ addBtn.addEventListener('click', () => {
 									console.log(ws[`R${row}`].v);
 									q2 = `INSERT INTO ${select.value + textArea.value} (datetime, type, ticker, price, currency, number, NKD, summ, commission1, commission2, commission3, TT, TP)
 									VALUES ("${DT}", ${tpe}, "${ws[`AN${row}`].v}", ${toFlot(ws[`AS${row}`].v)}, "${ws[`AW${row}`].v}", ${ws[`BB${row}`].v}, ${ws[`BJ${row}`].v}, ${toFlot(ws[`BQ${row}`].v)}, ${toFlot(ws[`CC${row}`].v)}, ${ws[`CL${row}`].v}, ${ws[`CW${row}`].v}, "${ws[`X${row}`].v}", "${ws[`R${row}`].v}")`
-									// console.log(q2)
+									
 									if (tpe != 'err'){
 										db.run(q2, (e) => {
 											error = e;

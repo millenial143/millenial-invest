@@ -158,20 +158,6 @@ async function getTickersWithMMVB(moexTT, allSecurities, table) {
 	return (allSecurities);
 }
 
-/*async function getCourse(code) {
-	let reqPromise = new Promise ((resolve, reject) => {
-		request({url: `https://www.cbr-xml-daily.ru/daily_json.js`, json: true}, function(err, res, json) {
-			let v = 1;
-			if (json.Valute){
-				v = json.Valute[code].Value;
-			}
-			resolve(v);
-		})
-	}); 	
-	let requestPromise = await reqPromise;
-	
-	return (v);
-}*/
 
 ipc3.on('updP', () => {
 	var db = new sqlite3.Database('db.sqlite3', (err) => {

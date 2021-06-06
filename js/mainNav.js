@@ -1,5 +1,4 @@
-// const { ipcRenderer } = require('electron');
-// const ipc4 = ipcRenderer;
+
 let tableName;
 let broker;
 
@@ -21,14 +20,12 @@ ipc.on('updM', function() {
 		nav[i].addEventListener('contextmenu', function(event) {
 			
 			let portName = nav[i].querySelector('span');
-			//console.log(portName);
+			
 			tableName = portName;
 			broker = nav[i].getAttribute('broker');
 
 
-			// let c = nav[i].getBoundingClientRect();
 			
-			// console.log(c.y);
 			menu.style.visibility = 'visible';
 			menu.style.top = `${event.clientY}px`;
 			menu.style.left = `${event.clientX}px`;

@@ -140,13 +140,13 @@ ipc.on('updateTables', (event, table, broker) => {
 
 					let DT = toDateTime(ws[`H${row}`].v, ws[`L${row}`].v);
 
-					//console.log(`${toDateTime(ws[`H${row}`].v, ws[`L${row}`].v)}`)
+		
 					console.log(typeof ws[`H${row}`].v)
 					console.log(ws[`H${row}`].v.length)
 					if (ws[`A${row}`].v.length == 10){
 						q2 = `INSERT INTO ${broker + table} (datetime, type, ticker, price, currency, number, NKD, summ, commission1, commission2, commission3)
 						VALUES ("${DT}", ${tpe}, "${ws[`AN${row}`].v}", ${toFlot(ws[`AS${row}`].v)}, "${ws[`AW${row}`].v}", ${ws[`BB${row}`].v}, ${ws[`BJ${row}`].v}, ${toFlot(ws[`BQ${row}`].v)}, ${toFlot(ws[`CC${row}`].v)}, ${ws[`CL${row}`].v}, ${ws[`CW${row}`].v}, "${ws[`X${row}`].v}", "${ws[`R${row}`].v}")`
-						// console.log(q2)
+					
 						if (tpe != 'err'){
 							db.run(q2, (e) => {
 								error = e;
